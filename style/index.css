@@ -75,10 +75,9 @@ header {
     color: #c796e6;
     display: flex;
     width: 100%;
-    margin: 0 auto;
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 999; */
 }
 /* left*/ h2 { 
     font-family: 'Amatic SC', cursive;
@@ -91,12 +90,9 @@ header {
     background-color: #001c20;
     color: #c796e6;
     font-size: 1.2rem;
-    padding: 2%;
+    padding: 1.5%;
     border-radius: 15px;
-    margin: .5rem;
 }
-
-
 /* right*/ nav { 
     width: 60%;
     margin-right: .5rem;
@@ -109,7 +105,7 @@ header {
     background-image: url('projectImgs/aSign1.jpg');
     width: 50%;
     margin: 0 auto;
-    position: center;
+    position: relative;
     margin-top: 6rem;
 }
 .topcontainer {
@@ -161,7 +157,6 @@ img {
 }
 
 p {
-    background color: ;
     font-family: 'Indie Flower', cursive;
     font-size: 1.2rem;
     width: 50%;
@@ -176,31 +171,34 @@ span {
     display: block;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
-
+    
+}
+.images div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.images p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    word-spacing: 12rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .squares {
-    width: 15rem;
-    height: 15rem;
+    width: 18vw;
+    height: 18vw;
     object-fit: cover;
     margin: 0 2rem;
 }
 
-.squares:hover: {
+.squares:hover {
    filter: blur(12px);
 }
 
-.descriptions {
-    font-family: 'Indie Flower', cursive;
-    font-size: 2rem;
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 2rem;
-    text-align: center;
-    word-spacing: 12rem;
-}
+
 
 footer {
     width: 100%;
@@ -222,3 +220,39 @@ i {
     height:15%;
     margin-bottom: 4px;
 } */
+@media(max-width:800px){
+    h1{
+        font-size: 2.75rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    .topcontainer {
+        display: block;
+        position: absolute;
+        top: 25%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+    }
+    .images p{
+        font-size: 1rem;
+    }
+
+}
+@media(max-width:400px){
+    header{
+        display: block;
+        text-align: center;
+         }
+         header h2{
+             width: 100%;
+         }
+         header nav{
+             margin:auto;
+             flex-direction: column;
+             justify-content: center;
+
+         }
+
+}
