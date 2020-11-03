@@ -1,61 +1,28 @@
-/* Meyer's reset below. Meyer's reset below. Meyers reset below. */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	/* border: 0; */
-	font-size: 62.5%;
-	font: inherit;
-	vertical-align: baseline;
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    max-width:100%;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+html {
+    font-size:62.5%;
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+
 }
 body {
-    /* display: inline-block; */
     background-image: url("../projectImgs/pic5.jpg");
     background-color: #4f4f4f;
     background-size:cover;
     background-position: center;
     background-repeat:repeat;
-    font-size: 1rem;
+    font-size: 1.6rem;
     align-items: center;
-    width: 100%;
     line-height: 1.3;
     color: lightpink;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 /* Meyer's reset above. Meyer's reset above. Meyers reset above. */
 
@@ -65,9 +32,7 @@ table {
     border: 1px solid black;
 } */
 
-.spacing {
-    margin: 5rem 0 0 0;
-}
+
 
 /* container */ 
 header { 
@@ -75,69 +40,63 @@ header {
     color: #c796e6;
     display: flex;
     width: 100%;
-    /* position: fixed;
-    top: 0;
-    z-index: 999; */
+    justify-content:space-between;
+    position: fixed;
+    margin-bottom: 6rem;
 }
 /* left*/ h2 { 
     font-family: 'Amatic SC', cursive;
-    width: 40%;
+    width: 100%;
     font-size: 3rem;
     padding-left: 1rem;
 }
-/* in left*/ button {
+/* in left*/ .button {
     font-family: 'Indie Flower', cursive;
     background-color: #001c20;
     color: #c796e6;
-    font-size: 1.2rem;
     padding: 1.5%;
-    border-radius: 15px;
+    border: .3px solid lightblue;
+    border-radius: 10px;
+    margin-left: 1rem;
 }
 /* right*/ nav { 
-    width: 60%;
+    display:flex;
+    justify-content:flex-end;
+    width: 100%;
     margin-right: .5rem;
-    justify-content: flex-end;
-    display: flex;
+    
 }
 
-.headshot {
-    display: block;
-    background-image: url('projectImgs/aSign1.jpg');
+
+.topcontainerIndex {
+    background-image: url("/projectImgs/aSign1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    margin: 0 auto;
     width: 50%;
-    margin: 0 auto;
-    position: relative;
-    margin-top: 6rem;
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
 }
-.topcontainer {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
+.topcontainerIndex div {
+    margin-right: 5rem;
 }
-
 h3 {
     font-family: 'Amatic SC', cursive;
-    font-size: 1.8rem;
+    font-size: 3rem;
     color: yellowgreen;
     text-align: center;
-}
 
+}
 h1 {
     font-family: 'Amatic SC', cursive;
     color: #c796e6;
-    font-size: 4.3rem;
+    font-size: 4.5rem;
     text-align: center;
     padding: 1rem;
 }
 
-section { 
-    width: 60%;
-    display: flex;
-    margin: auto;
-    
-}
 
 img {
     width: 100%;
@@ -146,11 +105,62 @@ img {
     padding-top: 30px;
 }
 
-.middle {
-    position: relative;
+
+.imagesIndex div {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.imagesIndex p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 4rem;
+    width:100%;
+    text-align: center;
+    font-weight: 600;
+}
+.imagesIndex div div {
+    flex-direction: column;
+}
+.squaresIndex {
+    width: 60%;
+}
+.squaresIndex:hover {
+    filter: invert(100);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    background-color: #001b22;
+    border-top: 5px double #197284;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    color: #0099CC;
+}
+
+footer div{
+    display:flex;
+    width: 50%;
+    justify-content: center;
+}
+i {
+    color: #0099CC;
+}
+
+/* .foot {
+    width: 10%;
+    height:15%;
+    margin-bottom: 4px;
+} */
+
+.middleIndex {
     text-align: center;
     width: 100%;
-    justify-content: center;  background-image: url('projectImgs/aSign1.jpg');
+    justify-content: center;
+    background-image: url('projectImgs/aSign1.jpg');
     margin: 1rem 0 2rem;
     padding: 0 1rem;
     border: 1px dotted #197284;
@@ -160,99 +170,132 @@ p {
     font-family: 'Indie Flower', cursive;
     font-size: 1.2rem;
     width: 50%;
-    display: block;
-    /* margin: 20px auto; */
-}
-span {
-    font-style: bold;
-
-}
-.images {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    
-}
-.images div{
-    display: flex;
-    justify-content: space-evenly;
-}
-.images p{
-    font-family: 'Indie Flower', cursive;
-    font-size: 2rem;
-    padding-bottom: 2rem;
-    word-spacing: 12rem;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    text-decoration: none;
+    color: #985b54;
 }
 
-.squares {
-    width: 18vw;
-    height: 18vw;
-    object-fit: cover;
-    margin: 0 2rem;
-}
+/* MOBILE SIZING */
 
-.squares:hover {
-   filter: blur(12px);
-}
+/* container */
+@media (max-width:800px) {
 
-
-
-footer {
-    width: 100%;
-    /* height: 6rem; */
-    background-color: #001b22;
-    border-top: 5px double #197284;
-    display: flex;
-    /* margin:auto; */
-    padding: 2rem 32.7%;
-    color: #0099CC;
-    
-}
-
-i {
-    color: #0099CC;
-}
-/* .foot {
-    width: 10%;
-    height:15%;
-    margin-bottom: 4px;
-} */
-@media(max-width:800px){
-    h1{
-        font-size: 2.75rem;
+    header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
-    h3{
+
+    button {
+        font-size: .9rem;
+        width: 90px;
+        height: 40px;
+        padding: -1rem;
+        margin-right: .3rem;
+        margin-top: 15px;
+    }
+.topcontainerIndex {
+    background-position: left;
+    align-items: start;
+    
+}
+    .topcontainerIndex h1 {
+       font-size: 3rem;
+       bottom: 300px;
+    }
+
+    .topcontainerIndex div{
+        margin: 0;
+        margin-top: 4rem;
+        margin-right: 2rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h1 {
         font-size: 2rem;
+        text-align: center;
+        padding: 0rem;
     }
-    .topcontainer {
-        display: block;
-        position: absolute;
-        top: 25%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-        margin: 0 auto;
+
+    .imagesIndex div p {
+        font-size: 1.4rem;
     }
-    .images p{
-        font-size: 1rem;
+
+    .imagesIndex {
+        margin-bottom: 2.5rem;
     }
+
+    footer {
+        border-top: none;
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+    }
+    footer div {
+        width: 100%;
+        text-align: center;
+margin-left:100px;
+height: 80%;
+
 
 }
-@media(max-width:400px){
-    header{
-        display: block;
-        text-align: center;
-         }
-         header h2{
-             width: 100%;
-         }
-         header nav{
-             margin:auto;
-             flex-direction: column;
-             justify-content: center;
 
-         }
+@media (max-width:500px) {
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+    }
+
+    h2 {
+        margin: 0 auto;
+        font-size: 1.9rem;
+    }
+
+    nav {
+        flex-direction:column;
+        width: 50%;
+        margin: .5rem 0;
+    }
+
+
+    .topcontainerIndex {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .topcontainerIndex div {
+        display: none;
+    }
+
+     .imagesIndex div p {
+        font-size: 1.4rem;
+    }
+
+    .imagesIndex {
+        margin-bottom: 2.5rem;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .imagesIndex div {
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .imagesIndex div div {
+        width: 100%;
+    }
+    .squaresIndex {
+        width: 70%;
+    }
+
+    footer {
+        margin-left: -25px;
+    }
+    
 
 }
